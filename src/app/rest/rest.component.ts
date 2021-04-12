@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Schema, Tables, Users} from '../users';
+import {Schema, Tables} from '../users';
 import {RestService} from '../rest.service';
 import {FormControl} from '@angular/forms';
 
@@ -13,8 +13,6 @@ export class RestComponent implements OnInit {
 
   constructor(public rs: RestService) {
   }
-
-  users: Users[] = [];
   schema: Schema | undefined;
   tables: [Tables] | undefined;
   select = new FormControl();
@@ -30,7 +28,7 @@ export class RestComponent implements OnInit {
     });
   }
 
-  test(uid: string): void {
+  addTable(uid: string): void {
     this.rs.getTable(uid).subscribe((response) => {
       this.displayedColumns = Object.keys(response[0]);
       this.dataSource = response;

@@ -2,7 +2,7 @@
     <mat-form-field appearance="fill">
     <mat-label>Select tab</mat-label>
     <mat-select>
-      <mat-option *ngFor="let table of tables" [value]="table.uid" (click)="test(table.uid)">
+      <mat-option *ngFor="let table of tables" [value]="table.uid" (click)="addTable(table.uid)">
         {{table.VisualName}}
       </mat-option>
     </mat-select>
