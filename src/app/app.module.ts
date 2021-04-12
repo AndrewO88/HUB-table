@@ -10,6 +10,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {ReactiveFormsModule} from '@angular/forms';
+import {MatTableModule} from '@angular/material/table';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatCardModule,
     MatFormFieldModule,
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTableModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

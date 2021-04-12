@@ -1,0 +1,18 @@
+.card {
+  margin: 10px !important;
+}
+table {
+  width: 100%;
+}
+.test {
+  background-color: blue;
+}
+td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 2em;
+}
+::ng-deep .mat-tooltip {
+  max-width: 1000px!important;;
+}

@@ -8,17 +8,17 @@ import {Observable} from 'rxjs';
 })
 export class RestService {
 
-  constructor(private http: HttpClient) {}
-
-  // url = 'http://localhost:3000/Users';
-  // getUsers(): Observable<Users[]> {
-  //   return this.http.get<Users[]>(this.url);
-  // }
-  url = 'http://localhost:3000/Data';
-  getScheme(): Observable<Schema> {
-    return this.http.get<Schema>(this.url);
+  constructor(private http: HttpClient) {
   }
-  getTable(): Observable<Schema> {
-    return this.http.get<Schema>(this.url);
+
+  url = 'http://localhost:3000';
+
+  getScheme(): Observable<Schema> {
+    return this.http.get<Schema>(this.url + '/Data');
+  }
+
+  getTable(id: string): Observable<any> {
+    const url = `${this.url}/${id}`;
+    return this.http.get<Schema>(url);
   }
 }
