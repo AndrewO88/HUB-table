@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Schema, Tables} from '../users';
 import {RestService} from '../rest.service';
 import {FormControl} from '@angular/forms';
+import {Schema, Tables} from '../interface';
 
 
 @Component({
