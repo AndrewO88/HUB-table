@@ -1,19 +1,27 @@
-export interface Schema {
-  Scheme: string;
-  Tables: [Tables];
+export interface Entity {
+  id: string;
+  displayName: string;
+}
+
+export interface User {
+  profile: Profile
+}
+
+export interface Profile {
+  name: string;
   lastName: string;
   email: string;
   mobile: string;
 }
-export interface Tables {
-  uid: string;
-  Name: string;
-  VisualName: string;
-  Columns: [Columns];
+
+export interface Schema {
+  scheme: string;
+  owner: User;
+  tables: Table[];
 }
-export interface Columns {
-  uid: string;
-  Name: string;
-  VisualName: string;
-  Type: string;
+export interface Table extends Entity {
+  columns: Column[];
+}
+export interface Column extends Entity {
+  type: string;
 }
